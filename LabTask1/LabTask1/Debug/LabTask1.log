@@ -1,0 +1,4 @@
+﻿  Task1.c
+g:\java to c module\lab task 1\labtask1\labtask1\task1.c(39): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  LabTask1.vcxproj -> G:\Java to C Module\Lab Task 1\LabTask1\Debug\LabTask1.exe
+  LabTask1.vcxproj -> G:\Java to C Module\Lab Task 1\LabTask1\Debug\LabTask1.pdb (Partial PDB)
