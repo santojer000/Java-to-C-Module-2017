@@ -11,6 +11,7 @@
 #include <stdio.h>
 
 char computeGrade(double studentScore);
+void displayMessage(char letterGrade);
 
 int main(void)
 {
@@ -25,20 +26,16 @@ int main(void)
 	// Call the computeGrade function
 	myTestGrade = computeGrade(myTestScore);
 	
-	// Display to the student their grade
-	if (myTestGrade == 'A' || myTestGrade == 'F')
-		// For grammar purposes
-		printf("A test score of %0.2lf%%, is an %c.\n", myTestScore, myTestGrade);
-	else
-		printf("A test score of %0.2lf%%, is a %c.\n", myTestScore, myTestGrade);
-	
 	// Tell student how they did on the test
-	if (myTestGrade == 'A' || myTestGrade == 'B')
+	/*if (myTestGrade == 'A' || myTestGrade == 'B')
 		printf("Good job!\n");
 	else if (myTestGrade == 'C')
 		printf("You can do better than that.\n");
 	else
-		printf("Better luck next time...\n");
+		printf("Better luck next time...\n");*/
+
+	// Call the displayMessage function to display the students grade
+	displayMessage(myTestGrade);
 
 	// Close the program
 	return 0;
@@ -61,4 +58,34 @@ char computeGrade(double studentScore)
 		letterGrade = 'F';
 
 	return letterGrade;
+}
+
+// A function that displays a message based on the grade recieved
+void displayMessage(char letterGrade)
+{
+	// Display to the student their grade
+	if (letterGrade == 'A' || letterGrade == 'F')
+		// For grammar purposes
+		printf("Your grade is an %c.\n", letterGrade);
+	else
+		printf("Your grade is a %c.\n", letterGrade);
+
+	switch (letterGrade)
+	{
+		case 'A':
+		case 'B':
+			printf("Good job!\n");
+			break;
+		case 'C':
+			printf("You can do better than that.\n");
+			break;
+		case 'D':
+			printf("Better luck next time...\n");
+			break;
+		case 'F':
+			printf("Improvement needed! Please contact your instuctor.\n");
+			break;
+		default:
+			printf("\nERROR: Invalid letter grade (%c) supplied!\n", letterGrade);
+	}
 }
