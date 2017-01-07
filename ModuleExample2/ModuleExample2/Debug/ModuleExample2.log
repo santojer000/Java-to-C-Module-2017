@@ -1,3 +1,4 @@
 ﻿  main.c
+g:\java to c module\moduleexample2\moduleexample2\main.c(41): warning C4013: 'system' undefined; assuming extern returning int
   ModuleExample2.vcxproj -> G:\Java to C Module\ModuleExample2\Debug\ModuleExample2.exe
   ModuleExample2.vcxproj -> G:\Java to C Module\ModuleExample2\Debug\ModuleExample2.pdb (Partial PDB)

@@ -17,25 +17,29 @@ int main(void)
 {
 	double myTestScore = 0.0;
 	char myTestGrade = '\0';
+	int moreGrades = 1;
 
-	// Prompt the user to enter their test score
-	printf("What did you score on the test? ");
-	// Scan their score input
-	scanf("%lf", &myTestScore);
+	// Enables multiple grades to be entered
+	while (moreGrades == 1)
+	{
+		// Prompt the user to enter their test score
+		printf("What did you score on the test? ");
+		// Scan their score input
+		scanf("%lf", &myTestScore);
 
-	// Call the computeGrade function
-	myTestGrade = computeGrade(myTestScore);
-	
-	// Tell student how they did on the test
-	/*if (myTestGrade == 'A' || myTestGrade == 'B')
-		printf("Good job!\n");
-	else if (myTestGrade == 'C')
-		printf("You can do better than that.\n");
-	else
-		printf("Better luck next time...\n");*/
+		// Call the computeGrade function
+		myTestGrade = computeGrade(myTestScore);
 
-	// Call the displayMessage function to display the students grade
-	displayMessage(myTestGrade);
+		// Call the displayMessage function to display the students grade
+		displayMessage(myTestGrade);
+
+		// Prompt the user if they want to input more grades
+		printf("\nWould you like to input more grades? (0 = no | 1 = yes): _\b");
+		scanf("%d", &moreGrades);
+
+		// Clear the console screen between each grade
+		system("cls");
+	}
 
 	// Close the program
 	return 0;
